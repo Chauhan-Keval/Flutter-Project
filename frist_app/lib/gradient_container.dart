@@ -1,23 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:frist_app/styled_text.dart';
 
 const startAligement = Alignment.topLeft;
 const endAligement = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key});
+  const GradientContainer({super.key, required this.colors});
+
+  final List<Color> colors;
+
+  void rollDice() {}
 
   @override
   Widget build(context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.blue, const Color.fromARGB(255, 30, 101, 225)],
+          colors: colors,
           begin: startAligement,
           end: endAligement,
         ),
       ),
-      child: Center(child: StyledText()),
+      child: Center(
+        child: Column(
+          children: [
+            Image.asset('assets/images/dice-4'),
+            TextButton(onPressed: rollDice, child: const Text('Roll Dice')),
+          ],
+        ),
+      ),
     );
   }
 }
