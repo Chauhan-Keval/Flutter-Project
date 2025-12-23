@@ -23,7 +23,7 @@ class GradientContainer extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Image.asset('assets/images/dice-4'),
+            Image.asset('assets/images/dice-4.png', width: 200),
             TextButton(onPressed: rollDice, child: const Text('Roll Dice')),
           ],
         ),
