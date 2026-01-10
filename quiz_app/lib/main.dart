@@ -8,12 +8,12 @@ void main() {
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [Colors.blue, const Color.fromARGB(255, 33, 100, 243)],
+              colors: [Colors.blue, Colors.cyanAccent],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
           ),
-          child: StartScreen(),
+          child: Center(child: StartScreen()),
         ),
       ),
     ),
